@@ -1,0 +1,349 @@
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	font-family: 'Montserrat', sans-serif/*"Raleway"*/
+	;
+}
+
+
+/*					MOBILE DESIGN
+----------------------------------------------------*/
+
+
+/*					HEADER & BANNER
+----------------------------------------------------*/
+
+header {
+	background-image: url('img/persona7-1.jpg');
+	background-size: cover;
+	background-position: 70% 50%;
+	background-repeat: no-repeat;
+}
+
+nav {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+}
+
+#logo {
+	text-align: center;
+}
+
+
+/* Logo rotates when hovering */
+
+#logo>img {
+	transform: rotate(180deg);
+	transition: transform 1s;
+}
+
+#logo>img:hover {
+	transform: rotate(360deg);
+}
+
+
+/* Navigation links */
+
+nav>ul {
+	display: none;
+	/*Does not show on mobile*/
+}
+
+.greeting {
+	margin-top: 15%;
+	margin-left: 5%;
+}
+
+.introduction {
+	display: block;
+}
+
+h1 {
+	margin: 0;
+	color: white;
+}
+
+
+/* The 'Welkom' */
+
+.greeting>h1>span:first-child {
+	margin: 0;
+	color: #ff6c26;
+}
+
+.subtitle {
+	color: white;
+	font-size: 14px;
+	margin-top: 0;
+	font-weight: 300;
+}
+
+.btn-container {
+	margin-left: 5%;
+	margin-top: 15%;
+}
+
+.btn-primary {
+	color: white;
+	background-color: #ff6c26;
+	padding: 15px;
+	border: 2px solid #ff6c26;
+	border-radius: 20px;
+	transition: background-color 0.5s;
+	box-shadow: 1px 5px 10px #00000040;
+	text-decoration: none;
+}
+
+.btn-primary:hover {
+	color: #ff6c26;
+	background-color: white;
+	border: 2px solid #ff6c26;
+}
+
+
+/*						MAIN PAGE
+----------------------------------------------------*/
+
+h2 {
+	padding-top: 5%;
+	font-size: 32px;
+	text-align: center;
+	color: #4B4B4B;
+}
+
+.aboutme {
+	white-space: pre-line;
+	padding-top: ;
+	font-size: 18px;
+	text-align: center;
+	line-height: 150%;
+	width: 95%;
+	/* margin: 0 auto 0 5%; */
+	margin: auto;
+	color: #4B4B4B;
+}
+
+.aboutme>a,
+.subtext>a {
+	color: #ff6c26;
+}
+
+.aboutme>a:hover,
+.subtext>a:hover {
+	text-decoration: underline;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.skills-container {
+	grid-gap: 5%;
+	margin: 5% auto;
+	width: 90%;
+	justify-items: center;
+}
+
+h3 {
+	color: #4B4B4B;
+	font-size: 24px;
+	text-align: center;
+}
+
+.skills-container>.item-container {
+	margin-top: 70px;
+}
+
+.item-container {
+	display: inline-block;
+	/* justify-items: center;
+	align-items: center; */
+}
+
+.item-container>img {
+	display: block;
+	margin: auto;
+}
+
+.subtext {
+	color: #4B4B4B;
+	text-align: center;
+	white-space: pre-line;
+}
+
+.center {
+	display: grid;
+	justify-items: center;
+	align-items: center;
+}
+
+.projects {
+	margin-top: 3%;
+}
+
+.projects>h2 {
+	padding: 0;
+	margin: auto;
+	color: #4B4B4B;
+	text-align: center;
+}
+
+.projects-container {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+}
+
+.project-container {
+	overflow-x: auto;
+	overflow-y: hidden;
+	/* display: flex; */
+	white-space: nowrap;
+	-webkit-overflow-scrolling: touch;
+}
+
+h4 {
+	margin: 0 0 10px 0;
+	color: #ff6C26;
+	text-align: center;
+}
+
+.subtext.project {
+	text-align: left;
+	width: 90%;
+}
+
+.projectImg {
+	width: 90%;
+	clip-path: circle(50%);
+}
+
+#contact {
+	margin-bottom: 10%;
+}
+
+
+/*					DESKTOP DESIGN
+----------------------------------------------------*/
+
+@media screen and (min-width: 1000px) {
+	/*					HEADER
+----------------------------------------------------*/
+	nav {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	nav>ul>li {
+		text-align: left;
+	}
+	#logo {
+		text-align: left;
+	}
+	#logo>img {
+		margin-left: 28%;
+	}
+	nav>ul {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+	ul {
+		font-weight: 600;
+		font-size: 24px;
+		padding: 0;
+	}
+	li {
+		list-style-type: none;
+	}
+	a {
+		text-decoration: none;
+		color: white;
+	}
+	ul>li {
+		margin-bottom: 20px;
+	}
+	ul>li>a {
+		transition: color 0.5s;
+	}
+	ul>li>a:hover {
+		color: #ff6c26;
+	}
+	.greeting>h1 {
+		font-size: 72px;
+	}
+	.subtitle {
+		font-size: 26px;
+	}
+	.btn-container {
+		margin-top: 8%;
+	}
+	.btn-primary {
+		font-size: 20px;
+		padding: 20px 50px;
+	}
+	/*					MAIN
+----------------------------------------------------*/
+	h2 {
+		font-size: 64px;
+		padding: 0;
+		margin-bottom: 0;
+	}
+	.aboutme {
+		font-size: 24px;
+	}
+	.subtext {
+		font-size: 20px;
+		white-space: pre-line;
+	}
+	.skills-container {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(1, 1fr);
+	}
+	h3 {
+		font-size: 36px;
+	}
+	.project-container {
+		white-space: normal;
+	}
+	.item-container {
+		margin-bottom: 100px;
+	}
+	h4 {
+		font-size: 30px;
+	}
+	.center {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.projectImg {
+		width: 100%;
+	}
+	.center.img-right {
+		grid-template-areas: "subtext projectImg";
+	}
+	.center.img-right>.projectImg {
+		grid-area: projectImg;
+	}
+	.center.img-right>.subtext {
+		grid-area: subtext;
+	}
+	.subtext.project {
+		width: 60%;
+	}
+	.btn-secondary {
+		display: inline-block;
+		margin-top: 10px;
+		padding: 10px 30px;
+		color: #ff6c26;
+		background-color: white;
+		border: 2px solid #ff6c26;
+		border-radius: 25px;
+		transition: background-color 0.5s;
+	}
+	.btn-secondary:hover {
+		text-decoration: none !important;
+		background-color: #ff6c26;
+		color: white;
+	}
+}
