@@ -57,22 +57,3 @@ window.onload = function () {
 	css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
 	document.body.appendChild(css);
 };
-
-function notifyMe() {
-			if (!("Notification" in window)) {
-				alert("this browser does not support desktop notifications");
-			} else if (Notification.permission === "granted") {
-				var notification = new Notification("Hi there!");
-			} else if (Notification.permission !== "denied") {
-				    Notification.requestPermission().then(function (permission) {
-				      // If the user accepts, let's create a notification
-				      Notification.permission = "granted";
-				      permission = "granted";
-				      if (permission === "granted") {
-				        var notification = new Notification("Hi there!");
-				      }
-				    });
-			}
-		}
-
-		notifyMe();
